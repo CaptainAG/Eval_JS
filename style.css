@@ -1,4 +1,71 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.backgroundLeft{
+    background-color: #C1C1C1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 102vh;
+    z-index: -1;
+    margin-top: -.5rem;
+    margin-left: -.5rem;
+}
+
+#newGame{
+    font-size: 1.3rem;
+}
+
+#game{
+    height: 17rem;
+}
+
+#roundplayer1{
+    padding-top: 4rem;
+    color: #D11B1B;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+h2{
+    font-weight: 300;
+}
+
+#roundplayer2{
+    padding-top: 4rem;
+    color: #EA3434;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+#backgroundScore1{
+    width: 6rem;
+    background-color: #D11B1B;
+}
+#backgroundScore2{
+    width: 6rem;
+    background-color: #EA3434;
+}
+
+.btn{
+    color: black;
+    text-decoration: none;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+#scoreplayer1{
+    color: white;
+}
+#scoreplayer2{
+    color: white;
 }

@@ -9,56 +9,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="backgroundLeft"> </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12" >
-                <a class="btn btn-success" id="newGame" role="button"> Nouvelle partie</a>
+            <div class="col-md-12 d-flex justify-content-center py-3" id="buttonNewGame">
+                <a class="btn btn-link" id="newGame" role="button"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V7h2v4h4v2h-4v4h-2v-4H7v-2h4zm1 11C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" fill="rgba(209,27,27,1)"/></svg>Nouvelle partie</a>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-5">
+        <div class="row" id="game">
+            <div class="col-md-5 d-flex flex-column align-items-center py-3">
                 <h2 id="player1">Joueur 1</h2>
+                <span id="roundplayer1">0</span>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 d-flex justify-content-center  py-3">
                 <img span id="dice" srx="" alt="dés">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex flex-column align-items-center  py-3">
                 <h2 id="player2">Joueur 2</h2>
+                <span id="roundplayer2">0</span>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-5">
-                <h3>Tour : <span id="roundplayer1">0</span></h3>
+            <div class="col-md-5 py-3 d-flex flex-column align-items-center">
+                <div class="d-flex flex-column align-items-center" id="backgroundScore1">
+                    <h3>Score </h3>
+                    <span id="scoreplayer1">0</span>
+                </div>
             </div>
-            <div class="col-md-2">
-                <a class="btn btn-success" id="roll" role="button"> Lancer</a>
+            <div class="col-md-2 d-flex flex-column justify-content-center py-2">
+                <a class="btn btn-link my-1" id="roll" role="button"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z" fill="rgba(209,27,27,1)"/></svg>Lancer</a>
+                <a class="btn btn-link my-1" id="hold" role="button"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 19h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7zM14 9h5l-7 7-7-7h5V3h4v6z" fill="rgba(209,27,27,1)"/></svg> Valider</a>
             </div>
-            <div class="col-md-5">
-                <h3>Tour : <span id="roundplayer2">0</span></h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-5">
-                <h3>Score : <span id="scoreplayer1">0</span></h3>
-            </div>
-            <div class="col-md-2">
-                <a class="btn btn-success" id="hold" role="button"> Valider</a>
-            </div>
-            <div class="col-md-5">
-                <h3>Score : <span id="scoreplayer2">0</span></h3>
+            <div class="col-md-5 py-3 d-flex flex-column align-items-center">
+                <div class="d-flex flex-column align-items-center" id="backgroundScore2">
+                    <h3>Score </h3>
+                    <span id="scoreplayer2">0</span>
+                </div>
             </div>
         </div>
     </div>
-    
-    <script src="./script.js"></script>
+
     <script src="./asset/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+    
 </body>
 </html>
