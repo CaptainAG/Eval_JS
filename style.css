@@ -1,45 +1,63 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    font-weight: 300;
     position: relative;
     top: 0;
     left: 0;
     z-index: -2;
+    
 }
 
-.backgroundLeft{
+
+
+#backgroundLeft{
     background-color: #C1C1C1;
     position: absolute;
-    top: 0;
+    top: 6rem;
     left: 0;
-    width: 50%;
-    height: 102vh;
+    width: 101%;
+    height: 17rem;
     z-index: -1;
     margin-top: -.5rem;
     margin-left: -.5rem;
 }
 
+
 #newGame{
     font-size: 1.3rem;
+    font-weight: 300;
 }
 
 #game{
-    height: 17rem;
+    height: 100vh;
 }
 
-#roundplayer1{
-    padding-top: 4rem;
+
+#roundFirstPlayer{
+    padding-top: 2rem;
     color: #D11B1B;
     font-size: 3rem;
     font-weight: 200;
 }
 
-h2{
-    font-weight: 300;
+#controle{
+    margin-top: 2rem;
+    border-bottom: 2px solid;
+    border-top: 2px solid;
 }
 
-#roundplayer2{
-    padding-top: 4rem;
+#boutton{
+    margin-top: 2rem;
+}
+
+h2{
+    font-weight: 300;
+    
+}
+
+#roundSecondPlayer{
+    padding-top: 2rem;
     color: #EA3434;
     font-size: 3rem;
     font-weight: 200;
@@ -57,15 +75,16 @@ h2{
 .btn{
     color: black;
     text-decoration: none;
+    font-weight: 300;
 }
 
 h3{
     font-size: 1rem;
 }
 
-#scoreplayer1{
+#scoreFirstPlayer{
     color: white;
 }
-#scoreplayer2{
+#scoreSecondPlayer{
     color: white;
 }
