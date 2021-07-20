@@ -13,7 +13,7 @@ newGame()
 
 //Variable
 document.getElementById("newGame").onclick= newGame;
-document.getElementById("roll").onclick= roll;
+document.getElementById("roll").onclick= rollDice;
 document.getElementById("hold").onclick= hold;
 
 //Création de la fonction pour démarrer le jeu 
@@ -39,33 +39,43 @@ function newGame() {
 
   //Donne le score du round et passe au joueur suivant si 1
 
-  function roll() {
-      let randomnumber = Math.floor (Math.random()*(6 - 1 + 1)) + 1;
-
-      console.log(randomnumber)
-
-      if ((activePlayer==1)&&(randomnumber>1)) { 
+let dice = document.getElementById('dice');
+var outputDiv = document.getElementById('diceResult');
+    
+function rollDice() {
+    let randomnumber = Math.floor(Math.random() * 6) + 1;
+    dice.dataset.side = randomnumber;
+    dice.classList.toggle("reRoll");
+    
+    console.log(randomnumber)
+        
+    outputDiv.classList.remove("reveal");
+    outputDiv.classList.add("hide");
+        outputDiv.innerHTML = "Vous avez fait " + randomnumber;
+            setTimeout(function(){ outputDiv.classList.add("reveal"); }, 1500);
+    
+    
+    if ((activePlayer==1)&&(randomnumber>1)) { 
         roundFirstPlayer=roundFirstPlayer + randomnumber;
         document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer; 
-        
-    
-       }else if ((activePlayer==1)&&(randomnumber===1)){
-        
+          
+      
+     }else if ((activePlayer==1)&&(randomnumber===1)){
         roundFirstPlayer=0; 
         activePlayer=activePlayer+1; 
         document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
-        
-    
-       }else if ((activePlayer==2)&&(randomnumber>1)){
+          
+      
+    }else if ((activePlayer==2)&&(randomnumber>1)){
         roundSecondPlayer=roundSecondPlayer + randomnumber;
         document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
-        
-      }else { 
-        
+          
+    }else { 
         roundSecondPlayer=0;
         activePlayer=activePlayer-1;
         document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
-    }
+      
+      }
     }
 
 //Ajoute le score du round au score et passe au joueurs suivant
