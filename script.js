@@ -9,8 +9,10 @@ Lors de son tour, le joueur peut décider à tout moment de:
 Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 -------------------------------*/
 
+
 //Variable
 document.getElementById("newGame").onclick= newGame;
+document.getElementById("roll").onclick= roll;
 
 //Création de la fonction pour démarrer le jeu 
 function newGame() { 
@@ -25,9 +27,41 @@ function newGame() {
     SecondPlayerWin=0;
     
   
-  document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
-  document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;
-  document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
-  document.querySelector('#roundSecondPlayer').textContent=  roundSecondPlayer;
+    document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
+    document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;
+    document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
+    document.querySelector('#roundSecondPlayer').textContent=  roundSecondPlayer;
    
   }
+
+
+  //Donne le score du round et passe au joueur suivant si 1
+
+  function roll() {
+      let randomnumber = Math.floor (Math.random()*(6 - 1 + 1)) + 1;
+
+      console.log(randomnumber)
+
+      if ((activePlayer==1)&&(randomnumber>1)) { 
+        roundFirstPlayer=roundFirstPlayer + randomnumber;
+        document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer; 
+        
+    
+       }else if ((activePlayer==1)&&(randomnumber===1)){
+        
+        roundFirstPlayer=0; 
+        activePlayer=activePlayer+1; 
+        document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
+        
+    
+       }else if ((activePlayer==2)&&(randomnumber>1)){
+        roundSecondPlayer=roundSecondPlayer + randomnumber;
+        document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
+        
+      }else { 
+        
+        roundSecondPlayer=0;
+        activePlayer=activePlayer-1;
+        document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
+    }
+    }
