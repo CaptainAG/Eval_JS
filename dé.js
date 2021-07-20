@@ -14,4 +14,4 @@ function rollDice() {
 		setTimeout(function(){ outputDiv.classList.add("reveal"); }, 1500);
 }
 
-dice.addEventListener("click", rollDice);
+roll.addEventListener("click", rollDice);

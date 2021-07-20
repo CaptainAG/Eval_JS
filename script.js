@@ -9,3 +9,25 @@ Lors de son tour, le joueur peut décider à tout moment de:
 Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 -------------------------------*/
 
+//Variable
+document.getElementById("newGame").onclick= newGame;
+
+//Création de la fonction pour démarrer le jeu 
+function newGame() { 
+  
+    scoreFirstPlayer = 0;
+    roundFirstPlayer = 0;
+    scoreSecondPlayer= 0;
+    roundSecondPlayer= 0;
+    score=0;
+    activePlayer=1;
+    FirstPlayerWin=0;
+    SecondPlayerWin=0;
+    
+  
+  document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
+  document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;
+  document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
+  document.querySelector('#roundSecondPlayer').textContent=  roundSecondPlayer;
+   
+  }
