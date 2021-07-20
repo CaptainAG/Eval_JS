@@ -83,7 +83,7 @@ function hold(){
    } else if ((activePlayer==1)&&(scoreFirstPlayer+roundFirstPlayer>=100)){
      activePlayer=1
      alert('Le joueur 1 à gagné la partie !!');
-     
+     nextGame()
     
     } else if ((activePlayer==2)&&(scoreSecondPlayer+roundSecondPlayer < 100)){
      scoreSecondPlayer=roundSecondPlayer + scoreSecondPlayer;
@@ -96,6 +96,22 @@ function hold(){
    } else if ((activePlayer==2)&&(scoreSecondPlayer+roundSecondPlayer>= 100)) {
      activePlayer=2
      alert('Le joueur 2 à gagné la partie !!');
-     
+     nextGame()
    }
    }
+
+
+   function nextGame(){
+    scoreFirstPlayer = 0;
+    roundFirstPlayer = 0;
+    scoreSecondPlayer= 0;
+    roundSecondPlayer= 0;
+    score=0;
+    
+    document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
+    document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;
+    document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
+    document.querySelector('#roundSecondPlayer').textContent=  roundSecondPlayer;
+   
+  }
+   
