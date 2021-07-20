@@ -14,7 +14,7 @@ body{
 #backgroundLeft{
     background-color: #f7f7f7;
     position: absolute;
-    top: 6rem;
+    top: 8rem;
     left: 0;
     width: 101%;
     height: 17rem;
@@ -55,7 +55,8 @@ body{
         justify-content: space-between;
     }
 }
-    
+
+
 
 
 
@@ -100,6 +101,9 @@ h2{
     font-weight: 300;
     
 }
+
+
+
 
 #roundSecondPlayer{
     padding-top: 2rem;

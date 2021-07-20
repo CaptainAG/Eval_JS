@@ -29,8 +29,11 @@ function newGame() {
     roundSecondPlayer= 0;
     score=0;
     activePlayer=1;
+    player1.style.opacity = "1";
+    player2.style.opacity = "0";
     FirstPlayerWin=0;
     SecondPlayerWin=0;
+    
     
   
     document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
@@ -62,22 +65,29 @@ function rollDice() {
     if ((activePlayer==1)&&(randomnumber>1)) { 
         roundFirstPlayer=roundFirstPlayer + randomnumber;
         document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer; 
-          
+        player1.style.opacity = "1";
+        player2.style.opacity = "0";
       
      }else if ((activePlayer==1)&&(randomnumber===1)){
         roundFirstPlayer=0; 
         activePlayer=activePlayer+1; 
         document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
+        player1.style.opacity = "0";
+        player2.style.opacity = "1";
           
       
     }else if ((activePlayer==2)&&(randomnumber>1)){
         roundSecondPlayer=roundSecondPlayer + randomnumber;
         document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
+        player2.style.opacity = "1";
+        player1.style.opacity = "0";
           
     }else { 
         roundSecondPlayer=0;
         activePlayer=activePlayer-1;
         document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
+        player1.style.opacity = "1";
+        player2.style.opacity = "0";
       
       }
     }
@@ -92,7 +102,8 @@ function hold(){
      document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer;
      document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
      activePlayer= 2
-     
+     player1.style.opacity = "1";
+     player2.style.opacity = "0";
      
    } else if ((activePlayer==1)&&(scoreFirstPlayer+roundFirstPlayer>=100)){
      activePlayer=1
@@ -105,6 +116,8 @@ function hold(){
      document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;
      document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
      activePlayer=1
+     player1.style.opacity = "0";
+     player2.style.opacity = "1";
      
      
    } else if ((activePlayer==2)&&(scoreSecondPlayer+roundSecondPlayer>= 100)) {
@@ -121,6 +134,8 @@ function hold(){
     scoreSecondPlayer= 0;
     roundSecondPlayer= 0;
     score=0;
+    player1.style.opacity = "1";
+    player2.style.opacity = "0";
     
     document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
     document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;
