@@ -31,6 +31,8 @@ function newGame() {
     activePlayer=1;
     player1.style.opacity = "1";
     player2.style.opacity = "0";
+    backgroundLeft.style.opacity = "1";
+    backgroundRight.style.opacity = "0";
     FirstPlayerWin=0;
     SecondPlayerWin=0;
     
@@ -67,6 +69,8 @@ function rollDice() {
         document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer; 
         player1.style.opacity = "1";
         player2.style.opacity = "0";
+        backgroundLeft.style.opacity = "1";
+        backgroundRight.style.opacity = "0";
       
      }else if ((activePlayer==1)&&(randomnumber===1)){
         roundFirstPlayer=0; 
@@ -74,13 +78,17 @@ function rollDice() {
         document.querySelector('#roundFirstPlayer').textContent= roundFirstPlayer;
         player1.style.opacity = "0";
         player2.style.opacity = "1";
+        backgroundLeft.style.opacity = "0";
+        backgroundRight.style.opacity = "1";
           
       
     }else if ((activePlayer==2)&&(randomnumber>1)){
         roundSecondPlayer=roundSecondPlayer + randomnumber;
         document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
-        player2.style.opacity = "1";
         player1.style.opacity = "0";
+        player2.style.opacity = "1";
+        backgroundLeft.style.opacity = "0";
+        backgroundRight.style.opacity = "1";
           
     }else { 
         roundSecondPlayer=0;
@@ -88,6 +96,8 @@ function rollDice() {
         document.querySelector('#roundSecondPlayer').textContent= roundSecondPlayer;
         player1.style.opacity = "1";
         player2.style.opacity = "0";
+        backgroundLeft.style.opacity = "1";
+        backgroundRight.style.opacity = "0";
       
       }
     }
@@ -104,6 +114,8 @@ function hold(){
      activePlayer= 2
      player1.style.opacity = "1";
      player2.style.opacity = "0";
+     backgroundLeft.style.opacity = "1";
+     backgroundRight.style.opacity = "0";
      
    } else if ((activePlayer==1)&&(scoreFirstPlayer+roundFirstPlayer>=100)){
      activePlayer=1
@@ -118,6 +130,8 @@ function hold(){
      activePlayer=1
      player1.style.opacity = "0";
      player2.style.opacity = "1";
+     backgroundLeft.style.opacity = "0";
+     backgroundRight.style.opacity = "1";
      
      
    } else if ((activePlayer==2)&&(scoreSecondPlayer+roundSecondPlayer>= 100)) {
@@ -136,6 +150,8 @@ function hold(){
     score=0;
     player1.style.opacity = "1";
     player2.style.opacity = "0";
+    backgroundLeft.style.opacity = "1";
+    backgroundRight.style.opacity = "0";
     
     document.querySelector('#scoreFirstPlayer').textContent= scoreFirstPlayer ;  
     document.querySelector('#scoreSecondPlayer').textContent= scoreSecondPlayer;

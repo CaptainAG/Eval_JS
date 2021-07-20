@@ -31,6 +31,26 @@ body{
     }
 }
 
+#backgroundRight{
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 46rem;
+    left: 0;
+    width: 101%;
+    height: 17rem;
+    z-index: -1;
+    margin-top: -.3rem;
+    margin-left: -.3rem;
+}
+@media screen and (min-width: 768px){
+    #backgroundRight{
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 101vh;
+    }
+}
+
 
 #newGame{
     font-size: 1.3rem;
@@ -62,7 +82,7 @@ body{
 
 #roundFirstPlayer{
     padding-top: 2rem;
-    color: #D11B1B;
+    color: #EA3434;
     font-size: 3rem;
     font-weight: 200;
 }
@@ -119,7 +139,7 @@ h2{
 
 #backgroundScore1{
     width: 6rem;
-    background-color: #D11B1B;
+    background-color: #EA3434;
 }
 #backgroundScore2{
     width: 6rem;
