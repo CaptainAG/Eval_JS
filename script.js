@@ -8,3 +8,4 @@ Lors de son tour, le joueur peut décider à tout moment de:
 - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
 Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 -------------------------------*/
+
