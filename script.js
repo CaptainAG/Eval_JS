@@ -148,6 +148,7 @@ function hold(){
     scoreSecondPlayer= 0;
     roundSecondPlayer= 0;
     score=0;
+    activePlayer=1;
     player1.style.opacity = "1";
     player2.style.opacity = "0";
     backgroundLeft.style.opacity = "1";
