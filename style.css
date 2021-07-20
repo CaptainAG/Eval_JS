@@ -128,6 +128,10 @@ h2{
     font-weight: 300;
 }
 
+.btn:hover{
+    color:#EA3434 ;
+}
+
 h3{
     font-size: 1rem;
 }

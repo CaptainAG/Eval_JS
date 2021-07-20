@@ -11,10 +11,14 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 
 newGame()
 
-//Variable
+//boutton 
 document.getElementById("newGame").onclick= newGame;
 document.getElementById("roll").onclick= rollDice;
 document.getElementById("hold").onclick= hold;
+document.querySelector('#btn-rules').addEventListener('click', function() {
+  alert("RÈGLES DU JEU: \n- Le jeu à 2 joueurs, chaque joueur joue sont tour \n- A chaque tour, un joueur lance un dé autant de fois qu'il le souhaite. Chaque résultat est ajouté à son score du tour \n- Mais, si le joueur obtient un 1, tout son score du tour est perdu. Après cela, c'est au tour du joueur suivant\n- Le joueur peut choisir de « Valider », ce qui signifie que son score du tour est ajouté à son score. Après cela, c'est au tour du joueur suivant\n- Le premier joueur à atteindre 100 points sur le score  remporte la partie"); 
+});
+
 
 //Création de la fonction pour démarrer le jeu 
 function newGame() { 
