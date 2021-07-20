@@ -19,8 +19,16 @@ body{
     width: 101%;
     height: 17rem;
     z-index: -1;
-    margin-top: -.5rem;
-    margin-left: -.5rem;
+    margin-top: -.3rem;
+    margin-left: -.3rem;
+}
+@media screen and (min-width: 768px){
+    #backgroundLeft{
+    top: 0;
+    left: 0;
+    width: 50.5%;
+    height: 101vh;
+    }
 }
 
 
@@ -29,9 +37,26 @@ body{
     font-weight: 300;
 }
 
-#game{
-    height: 100vh;
+
+
+@media screen and (min-width: 768px){
+    #game{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3rem;
+    }
 }
+
+@media screen and (min-width: 768px){
+    .block1{
+        display: flex;
+        height: 33rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+    
+
 
 
 #roundFirstPlayer{
@@ -40,16 +65,36 @@ body{
     font-size: 3rem;
     font-weight: 200;
 }
+@media screen and (min-width: 768px){
+    #roundFirstPlayer{ 
+        padding-top: 8rem;
+    }
+}
 
 #controle{
-    margin-top: 2rem;
+    margin-top: 2.3rem;
     border-bottom: 2px solid;
     border-top: 2px solid;
+}
+
+@media screen and (min-width: 768px){
+    #controle{
+        border-top: none;
+        border-bottom: none;
+
+    }
 }
 
 #boutton{
     margin-top: 2rem;
 }
+
+@media screen and (min-width: 768px){
+    #boutton{
+        margin-top: 9rem;
+    }
+}
+
 
 h2{
     font-weight: 300;
@@ -61,6 +106,11 @@ h2{
     color: #EA3434;
     font-size: 3rem;
     font-weight: 200;
+}
+@media screen and (min-width: 768px){
+    #roundSecondPlayer{ 
+        padding-top: 8rem;
+    }
 }
 
 #backgroundScore1{
@@ -97,6 +147,12 @@ h3{
     height: 90px;
     transform-style: preserve-3d;
     transition: transform 1.5s ease-out;
+}
+
+@media screen and (min-width: 768px){
+    #dice{
+        margin-top: 9rem;
+    }
 }
 
 #dice:hover {

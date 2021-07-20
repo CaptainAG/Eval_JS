@@ -22,71 +22,78 @@
         </div>
 
         <div id="game">
-            <div class="d-flex flex-column align-items-center py-3">
-                <h2 id="firstPlayer">Joueur 1</h2>
-                <span id="roundFirstPlayer">0</span>
-            </div>
-            <div class=" py-3 d-flex flex-column align-items-center">
-                <div class="d-flex flex-column align-items-center" id="backgroundScore1">
-                    <h3>Score </h3>
-                    <span id="scoreFirstPlayer">0</span>
+            <div class="block1">
+                <div class="d-flex flex-column align-items-center py-3">
+                    <h2 id="firstPlayer">Joueur 1</h2>
+                    <span id="roundFirstPlayer">0</span>
+                </div>
+                <div class=" py-3 d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column align-items-center" id="backgroundScore1">
+                        <h3>Score </h3>
+                        <span id="scoreFirstPlayer">0</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="d-flex flex-column justify-content-center align-items-center" id='controle'>
-                <div id="dice" data-side="1">
-                    <div class="sides side-1">
-                            <span class="dot dot-1"></span>
+                
+            <div class="block2">
+                <div class="d-flex flex-column justify-content-center align-items-center" id='controle'>
+                    <div id="dice" data-side="1">
+                        <div class="sides side-1">
+                                <span class="dot dot-1"></span>
+                        </div>
+                        <div class="sides side-2">
+                                <span class="dot dot-1"></span>
+                                <span class="dot dot-2"></span>
+                        </div>
+                        <div class="sides side-3">
+                                <span class="dot dot-1"></span>
+                                <span class="dot dot-2"></span>  
+                                <span class="dot dot-3"></span>
+                        </div>
+                        <div class="sides side-4">
+                                <span class="dot dot-1"></span>
+                                <span class="dot dot-2"></span>  
+                                <span class="dot dot-3"></span>
+                                <span class="dot dot-4"></span>
+                        </div>
+                        <div class="sides side-5">
+                                <span class="dot dot-1"></span>
+                                <span class="dot dot-2"></span>  
+                                <span class="dot dot-3"></span>
+                                <span class="dot dot-4"></span>
+                                <span class="dot dot-5"></span>
+                        </div>
+                        <div class="sides side-6">
+                                <span class="dot dot-1"></span>
+                                <span class="dot dot-2"></span>  
+                                <span class="dot dot-3"></span>
+                                <span class="dot dot-4"></span>
+                                <span class="dot dot-5"></span>
+                                <span class="dot dot-6"></span>
+                        </div>
                     </div>
-                    <div class="sides side-2">
-                            <span class="dot dot-1"></span>
-                            <span class="dot dot-2"></span>
-                    </div>
-                    <div class="sides side-3">
-                            <span class="dot dot-1"></span>
-                            <span class="dot dot-2"></span>  
-                            <span class="dot dot-3"></span>
-                    </div>
-                    <div class="sides side-4">
-                            <span class="dot dot-1"></span>
-                            <span class="dot dot-2"></span>  
-                            <span class="dot dot-3"></span>
-                            <span class="dot dot-4"></span>
-                    </div>
-                    <div class="sides side-5">
-                            <span class="dot dot-1"></span>
-                            <span class="dot dot-2"></span>  
-                            <span class="dot dot-3"></span>
-                            <span class="dot dot-4"></span>
-                            <span class="dot dot-5"></span>
-                    </div>
-                    <div class="sides side-6">
-                            <span class="dot dot-1"></span>
-                            <span class="dot dot-2"></span>  
-                            <span class="dot dot-3"></span>
-                            <span class="dot dot-4"></span>
-                            <span class="dot dot-5"></span>
-                            <span class="dot dot-6"></span>
+                    <div class=" d-flex flex-column justify-content-center align-items-center py-2" id='boutton'>
+                        <p id="diceResult"> Votre résultat </p>
+                        <div class="controller">
+                            <button class="btn btn-link my-1" id="roll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z" fill="rgba(209,27,27,1)"/></svg>Lancer</button>
+                        </div>
+                        <a class="btn btn-link my-1" id="hold" role="button"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 19h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7zM14 9h5l-7 7-7-7h5V3h4v6z" fill="rgba(209,27,27,1)"/></svg> Valider</a>
                     </div>
                 </div>
-                <div class=" d-flex flex-column justify-content-center align-items-center py-2" id='boutton'>
-                    <p id="diceResult"> Votre résultat </p>
-                    <div class="controller">
-                        <button class="btn btn-link my-1" id="roll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z" fill="rgba(209,27,27,1)"/></svg>Lancer</button>
+            </div>
+            <div class="block1">
+                <div class=" d-flex flex-column align-items-center  py-3">
+                    <h2 id="secondPlayer">Joueur 2</h2>
+                    <span id="roundSecondPlayer">0</span>
+                </div>
+                <div class=" py-3 d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column align-items-center" id="backgroundScore2">
+                        <h3>Score </h3>
+                        <span id="scoreSecondPlayer">0</span>
                     </div>
-                    <a class="btn btn-link my-1" id="hold" role="button"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 19h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7zM14 9h5l-7 7-7-7h5V3h4v6z" fill="rgba(209,27,27,1)"/></svg> Valider</a>
                 </div>
             </div>
-            <div class=" d-flex flex-column align-items-center  py-3">
-                <h2 id="secondPlayer">Joueur 2</h2>
-                <span id="roundSecondPlayer">0</span>
-            </div>
-            <div class=" py-3 d-flex flex-column align-items-center">
-                <div class="d-flex flex-column align-items-center" id="backgroundScore2">
-                    <h3>Score </h3>
-                    <span id="scoreSecondPlayer">0</span>
-                </div>
-            </div>
+                
         </div>
 
            
